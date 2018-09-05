@@ -1,0 +1,33 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	color:#DC3545;
+	background-color: #000;
+}
+input{
+	border-radius: 1%;
+	margin: 1%;
+	background-color:#000;
+	color:#fff;
+	border:none;
+}
+ol{
+	list-style-type: 1;
+}
+li{
+	font-size: 18px;
+	widtH:300px;
+	display: inline-block;
+}
+a{
+	color:#000;
+}
+a:hover{
+	color:#DC3545;
+}
+#intro,
+#generate{
+	height:300px;
+}
+h2, li{
+	font-family: 'Satisfy', cursive;
+}

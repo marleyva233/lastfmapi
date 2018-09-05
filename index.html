@@ -11,18 +11,63 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 		<!-- my custom css -->
 		<link rel="stylesheet" href="css/main.css">
+		<!-- my custom fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Satisfy" rel="stylesheet">
 	</head>
 	<body>
-		<div class="container-fluid text-center pt-3">
+		<!-- starting navigation -->
+		<div class="container-fluid fixed-top bg-light">
 			<div class="row">
 				<div class="col-10 mx-auto">
-					<h4>Last.fm API project</h4>
-					<p>To generate your top artists enter your username below.</p>
-					<input type="text" id="username"><button onclick="generateTop()">submit</button>
-					<!-- <button onclick="generateTopTracks()">Top Tracks</button> -->
+					<nav class="nav">
+					  <a class="nav-link" href="https://www.last.fm/api">last.fm API</a>
+					  <a class="nav-link" href="https://www.last.fm/user/vampiremar">Vampiremar</a>
+					  <a class="nav-link" href="#top">Top Tracks on Last.fm</a>
+					  <a class="nav-link" href="#username">Generate Top Artists</a>
+					</nav>
 				</div>
 			</div>
+		</div>
+		<!-- end navigation -->
+		<div class="container-fluid pt-5" id="intro">
+			<div class="row">
+				<div class="col-10 pt-5 mx-auto text-center">
+					<img src="http://cs111.wellesley.edu/archive/cs111_fall16/public_html/content/labs/lab11//images/lastfm.png" class="img-fluid" alt="last.fm logo">
+					<p>This project uses the last.fm API. I used the API to generate the top tracks on last.fm. I also used the API to generate a user's top artists. It only  works if you have a last.fm account. Enjoy! </p>
+				</div>
+			</div>
+		</div>
+		<!-- GENERATING GENERIC DATA -->
+		<div class="container-fluid pt-5" id="top">
+			<div class="row">
+				<div class="col-12 mx-auto text-center">
+					<h2>Top Tracks on last.fm</h2>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 mx-auto text-center">
+					<ol id="topTracks">
+					<!-- display top tracks info here -->
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<!-- STARTING NEW SECTION -->
+		<div class="container-fluid text-center pt-3" id="generate">
+			<div class="row">
+				<div class="col-10 mx-auto">
+					<h2>Top Artists</h2>
+					<p>To generate your top artists enter your username below. Or enter vampiremar to see my results :D</p>
+					<input type="text" id="username" placeholder="username"><button class="btn btn-danger" onclick="generateTop()">Generate User's Top 50 Artists</button>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
 			<div class="row" id="displayResults">
+				<!-- results will be displayed here -->
 			</div>
 		</div>
 		<!--jquery -->

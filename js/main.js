@@ -33,14 +33,28 @@ function generateTop(){
 	document.getElementById("username").value="";
 }
 
-// function generateTopTracks(){
-// 	$.ajax({
-// 		url:"http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
-// 		dataType:"json",
-// 		type: 'GET',
-// 		success: function(data){
-// 			console.log(data);
+function generateTopTracks(){
+	var displayTopTracks=document.getElementById("topTracks");
+	$.ajax({
+		url:"http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
+		dataType:"json",
+		type: 'GET',
+		success: function(data){
+			console.log(data);
+			for (var i=0; i<15; i++){
+				var topTracks=data.tracks.track[i];
+				
+				var topTrackDetails=document.createElement("li");
+					topTrackDetails.innerHTML= i+1+". " + topTracks.name +" by "+ topTracks.artist.name+ "<br>";
+				var topTrackImg=document.createElement("img");
+					topTrackImg.src=topTracks.image[2]["#text"];
+					topTrackImg.classList.add("pb-5");
 
-// 		}
-// 	})
-// }
+				displayTopTracks.appendChild(topTrackDetails);
+				topTrackDetails.appendChild(topTrackImg);
+			}
+		}
+	});
+}
+
+generateTopTracks();
