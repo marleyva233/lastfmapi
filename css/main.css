@@ -1,3 +1,7 @@
+/*[0]GENERAL
+[1]NAVIGATION*/
+
+/*[0]GENERAL*/
 body{
 	font-family: 'Open Sans', sans-serif;
 	color:#DC3545;
@@ -19,15 +23,27 @@ li{
 	display: inline-block;
 }
 a{
-	color:#000;
-}
-a:hover{
+	font-family: 'Satisfy', cursive;
 	color:#DC3545;
 }
-#intro,
-#generate{
-	height:300px;
+a:hover{
+	color:#FFF;
 }
 h2, li{
 	font-family: 'Satisfy', cursive;
 }
+/*[1]NAVIGATION*/
+nav a{
+	color:#000;
+}
+nav a:hover{
+	color:#DC3545;
+}
+
+/*[2]MAIN CONTENT*/
+#intro,
+#generate{
+	height:300px;
+}
+
+
