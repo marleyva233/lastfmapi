@@ -16,14 +16,15 @@
 	</head>
 	<body>
 		<!-- starting navigation -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 		  <a class="navbar-brand" href="#intro">Last.fm API Project</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		    <div class="navbar-nav">
-		      <a class="nav-item nav-link active" href="#intro">Home <span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link" href="#intro">Home</a>
+		      <a class="nav-item nav-link" href="artistInfo">Artist Info</a>
 		      <a class="nav-item nav-link" href="#top">Top Tracks</a>
 		      <a class="nav-item nav-link" href="#generate">Top Artists</a>
 		      <a class="nav-item nav-link" href="https://www.last.fm/user/vampiremar">Vampiremar</a>
@@ -31,15 +32,28 @@
 		  </div>
 		</nav>
 		<!-- end navigation -->
-		<div class="container-fluid pt-5" id="intro">
+		<div class="container-fluid py-5" id="intro">
 			<div class="row">
-				<div class="col-10 pt-5 mx-auto text-center">
+				<div class="col-10 py-5 mx-auto text-center">
 					<img src="http://cs111.wellesley.edu/archive/cs111_fall16/public_html/content/labs/lab11//images/lastfm.png" class="img-fluid" alt="last.fm logo">
-					<p>This project uses the last.fm API. I used the API to generate the top tracks on last.fm. I also used the API to generate a user's top artists. It only  works if you have a last.fm account. Enjoy! </p>
+					<p>This project uses the last.fm API. I did a couple of things with the API, one was to entering an artist and generating their last.fm summary, play count and listeners. Another thing I did was show the top tracks on last.fm and finally I created a code that generates a user's top artists of all time. The last bit only works if you have a last.fm account.</p>
 				</div>
 			</div>
 		</div>
-		<!-- GENERATING GENERIC DATA -->
+			<!-- STARTING GENERATE ARTIST SECTION -->
+		<div class="container-fluid py-5" id="artistInfo">
+			<div class="row pt-5">
+				<div class="col-10 mx-auto text-center">
+					<h2>Artist Info</h2>
+					<p>With this project you can look up artist information. Enter an artist below to see their last.fm artist summary.</p>
+					<input type="text" id="artist" placeholder="artist"><button class="btn btn-danger" onclick="generateArtist()">Feed Me Some Info!</button>
+				</div>
+			</div>
+			<div class="row" id="displayArtistInfo">
+				<!-- display artist info here -->
+			</div>
+		</div>
+		<!-- GENERATING TOP 15 TRACKS -->
 		<div class="container-fluid pt-5" id="top">
 			<div class="row">
 				<div class="col-12 mx-auto text-center">
@@ -47,7 +61,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid">
+		<div class="container-fluid pb-5">
 			<div class="row">
 				<div class="col-12 mx-auto text-center">
 					<ol id="topTracks">
@@ -57,8 +71,8 @@
 			</div>
 		</div>
 
-		<!-- STARTING NEW SECTION -->
-		<div class="container-fluid text-center pt-3" id="generate">
+		<!-- STARTING GENERATE USER TOP ARTISTS SECTION HERE -->
+		<div class="container-fluid text-center pt-5" id="generate">
 			<div class="row">
 				<div class="col-10 mx-auto">
 					<h2>Top Artists</h2>
@@ -66,8 +80,6 @@
 					<input type="text" id="username" placeholder="username"><button class="btn btn-danger" onclick="generateTop()">Generate User's Top 50 Artists</button>
 				</div>
 			</div>
-		</div>
-		<div class="container-fluid">
 			<div class="row" id="displayResults">
 				<!-- results will be displayed here -->
 			</div>

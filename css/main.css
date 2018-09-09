@@ -10,9 +10,10 @@ body{
 input{
 	border-radius: 1%;
 	margin: 1%;
+	padding: 1%;
 	background-color:#000;
 	color:#fff;
-	border:none;
+	border:2px solid #DC3545;
 }
 ol{
 	list-style-type: 1;
@@ -29,8 +30,11 @@ a{
 a:hover{
 	color:#FFF;
 }
-h2, li{
+h2, li, h5{
 	font-family: 'Satisfy', cursive;
+}
+h5{
+	text-align:center;
 }
 /*[1]NAVIGATION*/
 nav a{
@@ -38,6 +42,10 @@ nav a{
 }
 nav a:hover{
 	color:#DC3545;
+}
+p{
+	text-align: left;
+	text-indent: 10px;
 }
 
 /*[2]MAIN CONTENT*/
