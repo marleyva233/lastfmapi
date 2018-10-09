@@ -4,7 +4,7 @@ function generateArtist(){
 	var artistRequest=document.getElementById("artist").value;
 	var displayArtistDiv=document.getElementById("displayArtistInfo");
 	$.ajax({
-		url:"http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+artistRequest+"&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
+		url:"https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+artistRequest+"&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
 		dataType:"json",
 		type:'GET',
 		success:function(data){
