@@ -1,4 +1,4 @@
-// http://ws.audioscrobbler.com/2.0/
+// http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=lanadelrey&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json
 //generate artist info
 function generateArtist(){
 	var artistRequest=document.getElementById("artist").value;
