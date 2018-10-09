@@ -1,9 +1,13 @@
 /*[0]GENERAL
-[1]NAVIGATION*/
+[1]NAVIGATION
+[2]MAIN CONTENT
+[3]ANIMATION
+*/
 
 /*[0]GENERAL*/
 body{
 	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
 	color:#DC3545;
 	background-color: #000;
 }
@@ -54,4 +58,8 @@ p{
 	height:300px;
 }
 
-
+/*[3]ANIMATION*/
+.pulse {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

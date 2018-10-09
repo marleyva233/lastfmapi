@@ -12,13 +12,13 @@ function generateArtist(){
 			displayArtistDiv.innerHTML="";
 			var artistData=data.artist;
 			var artistDetails=document.createElement("div");
-				artistDetails.classList.add("col-10", "mx-auto", "pb-5", "text-center");
+				artistDetails.classList.add("col-10", "mx-auto", "pb-5", "text-center", "animated", "fadeInUp");
 				artistDetails.innerHTML="<h5>"+artistData.name+"</h5>";
 				artistDetails.innerHTML+="<p>"+artistData.bio.summary+"</p>";
 				artistDetails.innerHTML+="<h5>Listeners: "+artistData.stats.listeners+ " Playcount: "+artistData.stats.playcount+"</h5>";
 			var artistImage=document.createElement("img");
 				artistImage.src=artistData.image[5]["#text"];
-				artistImage.classList.add("mx-auto", "img-fluid", "p-2");
+				artistImage.classList.add("mx-auto", "img-fluid", "p-2", "animated", "slideInUp");
 				displayArtistDiv.appendChild(artistImage);
 				displayArtistDiv.appendChild(artistDetails);
 		}
@@ -74,7 +74,7 @@ function generateTopTracks(){
 					topTrackDetails.innerHTML= i+1+". " + topTracks.name +" by "+ topTracks.artist.name+ "<br>";
 				var topTrackImg=document.createElement("img");
 					topTrackImg.src=topTracks.image[2]["#text"];
-					topTrackImg.classList.add("pb-5");
+					topTrackImg.classList.add("pb-5", "animated", "pulse", "slower");
 
 				displayTopTracks.appendChild(topTrackDetails);
 				topTrackDetails.appendChild(topTrackImg);

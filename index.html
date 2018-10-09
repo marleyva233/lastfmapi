@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="css/main.css">
 		<!-- my custom fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Satisfy" rel="stylesheet">
+		<!-- animate css -->
+		<link rel="stylesheet"
+  		href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 	</head>
 	<body>
 		<!-- starting navigation -->
@@ -32,14 +35,16 @@
 		  </div>
 		</nav>
 		<!-- end navigation -->
+		<!-- starting intro to last.fm API -->
 		<div class="container-fluid py-5" id="intro">
 			<div class="row">
 				<div class="col-10 py-5 mx-auto text-center">
-					<img src="http://cs111.wellesley.edu/archive/cs111_fall16/public_html/content/labs/lab11//images/lastfm.png" class="img-fluid" alt="last.fm logo">
-					<p>This project uses the last.fm API. I did a couple of things with the API. The first thing I did was create an artist search. The search fetches the artit's last.fm summary, play and follower count. This API has many features, I chose to display the current top tracks playing on last.fm, look below! And finally I created a code that generates a user's top artists of all time. The last bit only works if you have a last.fm account.</p>
+					<img src="https://cs111.wellesley.edu/archive/cs111_fall16/public_html/content/labs/lab11//images/lastfm.png" class="img-fluid animated tada" alt="last.fm logo">
+					<p class="animated fadeIn">This project uses the last.fm API. I did a couple of things with the API. The first thing I did was create an artist search. The search fetches the artit's last.fm summary, play and follower count. This API has many features, I chose to display the current top tracks playing on last.fm, look below! And finally I created a code that generates a user's top artists of all time. The last bit only works if you have a last.fm account.</p>
 				</div>
 			</div>
 		</div>
+		<!-- ending intro to last.fm API -->
 			<!-- STARTING GENERATE ARTIST SECTION -->
 		<div class="container-fluid py-5" id="artistInfo">
 			<div class="row pt-5">
@@ -74,7 +79,7 @@
 		<!-- STARTING GENERATE USER TOP ARTISTS SECTION HERE -->
 		<div class="container-fluid text-center pt-5" id="generate">
 			<div class="row">
-				<div class="col-10 mx-auto">
+				<div class="col-10 mx-auto text-center">
 					<h2>Top Artists</h2>
 					<p>To generate your top artists enter your username below. Or enter vampiremar to see my results :D</p>
 					<input type="text" id="username" placeholder="username"><button class="btn btn-danger" onclick="generateTop()">Generate User's Top 50 Artists</button>
