@@ -60,6 +60,6 @@ p{
 
 /*[3]ANIMATION*/
 .pulse {
-  animation-duration: 2s;
+  animation-duration: 10s !important;
   animation-iteration-count: infinite;
 }
