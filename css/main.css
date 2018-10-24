@@ -53,13 +53,14 @@ p{
 }
 
 /*[2]MAIN CONTENT*/
-#intro,
-#generate{
-	height:300px;
+#introBody{
+	color:#fff;
 }
-
+#artistInfo{
+	color:#000;
+}
 /*[3]ANIMATION*/
 .pulse {
-  animation-duration: 10s !important;
+  animation-duration: 5s !important;
   animation-iteration-count: infinite;
 }

@@ -66,10 +66,10 @@ function generateTopTracks(){
 		url:"https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
 		dataType:"json",
 		type: 'GET',
-		success: function(data){
+		success:function(data){
 			for (var i=0; i<15; i++){
 				var topTracks=data.tracks.track[i];
-				
+				console.log(data);
 				var topTrackDetails=document.createElement("li");
 					topTrackDetails.innerHTML= i+1+". " + topTracks.name +" by "+ topTracks.artist.name+ "<br>";
 				var topTrackImg=document.createElement("img");

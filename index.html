@@ -36,9 +36,9 @@
 		</nav>
 		<!-- end navigation -->
 		<!-- starting intro to last.fm API -->
-		<div class="container-fluid py-5" id="intro">
+		<div class="container-fluid py-5 bg-dark" id="intro">
 			<div class="row">
-				<div class="col-10 py-5 mx-auto text-center">
+				<div class="col-10 py-5 mx-auto text-center" id="introBody">
 					<img src="https://cs111.wellesley.edu/archive/cs111_fall16/public_html/content/labs/lab11//images/lastfm.png" class="img-fluid animated tada" alt="last.fm logo">
 					<p class="animated fadeIn">This project uses the last.fm API. I did a couple of things with the API. The first thing I did was create an artist search. The search fetches the artit's last.fm summary, play and follower count. This API has many features, I chose to display the current top tracks playing on last.fm, look below! And finally I created a code that generates a user's top artists of all time. The last bit only works if you have a last.fm account.</p>
 				</div>
@@ -46,8 +46,8 @@
 		</div>
 		<!-- ending intro to last.fm API -->
 			<!-- STARTING GENERATE ARTIST SECTION -->
-		<div class="container-fluid py-5" id="artistInfo">
-			<div class="row pt-5">
+		<div class="container-fluid py-5 bg-light" id="artistInfo">
+			<div class="row">
 				<div class="col-10 mx-auto text-center">
 					<h2>Artist Info</h2>
 					<p>With this project you can look up artist information. Enter an artist below to see their last.fm artist summary.</p>
@@ -59,14 +59,14 @@
 			</div>
 		</div>
 		<!-- GENERATING TOP 15 TRACKS -->
-		<div class="container-fluid pt-5" id="top">
+		<div class="container-fluid pt-5 bg-dark" id="top">
 			<div class="row">
 				<div class="col-12 mx-auto text-center">
 					<h2>Top Tracks on last.fm</h2>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid pb-5">
+		<div class="container-fluid pb-5 bg-dark">
 			<div class="row">
 				<div class="col-12 mx-auto text-center">
 					<ol id="topTracks">
@@ -77,7 +77,7 @@
 		</div>
 
 		<!-- STARTING GENERATE USER TOP ARTISTS SECTION HERE -->
-		<div class="container-fluid text-center pt-5" id="generate">
+		<div class="container-fluid pt-5 bg-light" id="generate">
 			<div class="row">
 				<div class="col-10 mx-auto text-center">
 					<h2>Top Artists</h2>
