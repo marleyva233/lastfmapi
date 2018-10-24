@@ -41,7 +41,7 @@ function generateTop(){
 					userData.classList.add("col-3", "text-center", "mx-auto", "py-2");
 				var artist=document.createElement("a");
 					artist.href=topArtists.url;
-					artist.innerHTML=topArtists.name+ "<br>";
+					artist.innerHTML=i+1+topArtists.name+ "<br>";
 				var artistImage=document.createElement("img");
 					artistImage.src=topArtists.image[2]["#text"];
 					artistImage.alt=topArtists.name;
@@ -69,7 +69,6 @@ function generateTopTracks(){
 		success:function(data){
 			for (var i=0; i<15; i++){
 				var topTracks=data.tracks.track[i];
-				console.log(data);
 				var topTrackDetails=document.createElement("li");
 					topTrackDetails.innerHTML= i+1+". " + topTracks.name +" by "+ topTracks.artist.name+ "<br>";
 				var topTrackImg=document.createElement("img");
