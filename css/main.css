@@ -64,3 +64,6 @@ p{
   animation-duration: 5s !important;
   animation-iteration-count: infinite;
 }
+.topImages:hover{
+	filter: brightness(110%);
+}

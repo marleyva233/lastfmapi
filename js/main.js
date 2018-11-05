@@ -18,6 +18,7 @@ function generateArtist(){
 				artistDetails.innerHTML+="<h5>Listeners: "+artistData.stats.listeners+ " Playcount: "+artistData.stats.playcount+"</h5>";
 			var artistImage=document.createElement("img");
 				artistImage.src=artistData.image[5]["#text"];
+				artistImage.alt=artistRequest;
 				artistImage.classList.add("mx-auto", "img-fluid", "p-2", "animated", "slideInUp");
 				displayArtistDiv.appendChild(artistImage);
 				displayArtistDiv.appendChild(artistDetails);
@@ -45,7 +46,7 @@ function generateTop(){
 				var artistImage=document.createElement("img");
 					artistImage.src=topArtists.image[2]["#text"];
 					artistImage.alt=topArtists.name;
-					artistImage.classList.add("img-fluid");
+					artistImage.classList.add("img-fluid", "topImages");
 				var playCount=document.createElement("h6");
 					playCount.innerText="play count: "+topArtists.playcount;
 
@@ -73,6 +74,7 @@ function generateTopTracks(){
 					topTrackDetails.innerHTML= i+1+". " + topTracks.name +" by "+ topTracks.artist.name+ "<br>";
 				var topTrackImg=document.createElement("img");
 					topTrackImg.src=topTracks.image[2]["#text"];
+					topTrackImg.alt=topTracks.artist.name;
 					topTrackImg.classList.add("pb-5", "animated", "pulse", "slower");
 
 				displayTopTracks.appendChild(topTrackDetails);
