@@ -1,7 +1,7 @@
 // http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=lanadelrey&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json
 //generate artist info
 function generateArtist(){
-	var artistRequest=document.getElementById("artist").value;
+	var artistRequest=document.getElementById("artist").value.trim();
 	var displayArtistDiv=document.getElementById("displayArtistInfo");
 	$.ajax({
 		url:"https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+artistRequest+"&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
@@ -28,7 +28,7 @@ function generateArtist(){
 }
 //generate user top artists
 function generateTop(){
-	var username=document.getElementById("username").value;
+	var username=document.getElementById("username").value.trim();
 	var displayResults=document.getElementById("displayResults");
 	$.ajax({
 		url:"https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user="+username+"&api_key=24d232cbf60df58fd0c63b29d618cbe4&format=json",
@@ -39,10 +39,11 @@ function generateTop(){
 				//storing the data
 				var topArtists=data.topartists.artist[i];
 				var userData=document.createElement("div");
-					userData.classList.add("col-3", "text-center", "mx-auto", "py-2");
+					userData.classList.add("col-3", "text-center", "mx-auto", "p-2");
 				var artist=document.createElement("a");
 					artist.href=topArtists.url;
-					artist.innerHTML=i+1+topArtists.name+ "<br>";
+					artist.innerHTML=i+1+" "+topArtists.name+ "</br>";
+					artist.classList.add("links");
 				var artistImage=document.createElement("img");
 					artistImage.src=topArtists.image[2]["#text"];
 					artistImage.alt=topArtists.name;
