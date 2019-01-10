@@ -47,7 +47,7 @@ function generateTop(){
 				var artistImage=document.createElement("img");
 					artistImage.src=topArtists.image[2]["#text"];
 					artistImage.alt=topArtists.name;
-					artistImage.classList.add("img-fluid", "topImages");
+					artistImage.classList.add("img-fluid", "topImages", "px-2");
 				var playCount=document.createElement("h6");
 					playCount.innerText="play count: "+topArtists.playcount;
 
