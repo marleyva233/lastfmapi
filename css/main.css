@@ -5,13 +5,13 @@
 */
 
 /*[0]GENERAL*/
-body{
+body {
 	font-family: 'Open Sans', sans-serif;
 	font-size:14px;
 	color:#DC3545;
 	background-color: #000;
 }
-input{
+input {
 	border-radius: 1%;
 	margin: 1%;
 	padding: 1%;
@@ -19,47 +19,49 @@ input{
 	color:#fff;
 	border:2px solid #DC3545;
 }
-ol{
+ol {
 	list-style-type: 1;
 }
-li{
+li {
 	font-size: 18px;
 	widtH:300px;
 	display: inline-block;
 }
-a{
+a {
 	font-family: 'Satisfy', cursive;
 	color:#DC3545;
 }
-a:hover{
+a:hover {
 	color:#FFF;
 }
-h2, li, h5{
+h2, 
+li, 
+h5 {
 	font-family: 'Satisfy', cursive;
 }
-h5{
+h5 {
 	text-align:center;
 }
 /*[1]NAVIGATION*/
-nav a{
+nav a {
 	color:#000;
 }
-nav a:hover{
+nav a:hover {
 	color:#DC3545;
 }
-p{
+p {
 	text-align: left;
 	text-indent: 10px;
 }
 
 /*[2]MAIN CONTENT*/
-#introBody{
+#introBody {
 	color:#fff;
 }
-#artistInfo{
+#artistInfo {
 	color:#000;
 }
-.links{
+.links {
 	font-size: 16px;
 }
 /*[3]ANIMATION*/
@@ -67,6 +69,6 @@ p{
   animation-duration: 5s !important;
   animation-iteration-count: infinite;
 }
-.topImages:hover{
+.topImages:hover {
 	filter: brightness(110%);
 }
